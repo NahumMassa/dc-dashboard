@@ -8,7 +8,7 @@ import pandas as pd
 from utils.data_loader import (
     load_tia942_checklist, load_iso27001_controls, load_physical_security,
 )
-from utils.charts import compliance_bar, radar_chart
+from utils.charts import compliance_bar
 
 st.set_page_config(page_title="Security · DC-Ops", page_icon="🔒", layout="wide")
 
@@ -75,27 +75,15 @@ with col2:
 st.markdown("### 🏗️ Physical Security Layers — QRO-1 Facility")
 phys_df = load_physical_security()
 
-zones = phys_df["zone"].unique().tolist()
-zone_counts = [len(phys_df[phys_df["zone"] == z]) for z in zones]
-max_count = max(zone_counts)
-zone_scores = [round(c / max_count * 100) for c in zone_counts]
-
-r1, r2 = st.columns([1, 1])
-with r1:
-    st.plotly_chart(
-        radar_chart(zones, zone_scores, title="Security Coverage by Zone (%)"),
-        use_container_width=True,
-    )
-with r2:
-    st.markdown("**Defense-in-Depth Model**")
-    for layer_num in sorted(phys_df["layer"].unique()):
-        layer_items = phys_df[phys_df["layer"] == layer_num]
-        zone_name = layer_items["zone"].iloc[0]
-        icons = {"Perimeter": "🔲", "Building": "🏢", "Data Hall": "🖥️", "Monitoring": "📡"}
-        icon = icons.get(zone_name, "🔒")
-        with st.expander(f"{icon} Layer {layer_num} — {zone_name} ({len(layer_items)} controls)", expanded=(layer_num == 1)):
-            for _, row in layer_items.iterrows():
-                st.markdown(f"- ✅ {row['control']}")
+st.markdown("**Defense-in-Depth Model**")
+for layer_num in sorted(phys_df["layer"].unique()):
+    layer_items = phys_df[phys_df["layer"] == layer_num]
+    zone_name = layer_items["zone"].iloc[0]
+    icons = {"Perimeter": "🔲", "Building": "🏢", "Data Hall": "🖥️", "Monitoring": "📡"}
+    icon = icons.get(zone_name, "🔒")
+    with st.expander(f"{icon} Layer {layer_num} — {zone_name} ({len(layer_items)} controls)", expanded=(layer_num == 1)):
+        for _, row in layer_items.iterrows():
+            st.markdown(f"- ✅ {row['control']}")
 
 # ─── Download ─────────────────────────────────────────────────────────────────
 st.markdown("---")

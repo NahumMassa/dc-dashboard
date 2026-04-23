@@ -105,46 +105,6 @@ if selected_techs:
     fig2.update_layout(height=450)
     st.plotly_chart(fig2, use_container_width=True)
 
-# ─── Strategic Recommendations ────────────────────────────────────────────────
-st.markdown("### 💡 Strategic Recommendations for KIO Networks")
-
-recs = [
-    {
-        "priority": "🔴 High",
-        "title": "Accelerate Liquid Cooling Deployment",
-        "desc": "AI/ML workloads in Querétaro require 30+ kW/rack. Direct-to-chip liquid cooling should be piloted in QRO-1 by Q3 2026 to capture hyperscale demand.",
-        "timeline": "Q3 2026",
-    },
-    {
-        "priority": "🔴 High",
-        "title": "Deploy AI-Driven DCIM Platform",
-        "desc": "Replace legacy BMS with an AI-powered DCIM (e.g., Nlyte, Sunbird) to reduce PUE by 8-12% and enable predictive maintenance across all 4 sites.",
-        "timeline": "Q1 2026",
-    },
-    {
-        "priority": "🟡 Medium",
-        "title": "Pilot Digital Twin for QRO-1",
-        "desc": "Build a CFD-based digital twin of QRO-1 to simulate airflow optimization and capacity planning scenarios before physical changes.",
-        "timeline": "Q4 2026",
-    },
-    {
-        "priority": "🟡 Medium",
-        "title": "Expand Edge Micro DC Portfolio",
-        "desc": "Deploy modular edge DCs in Mérida and Tijuana to serve nearshoring clients needing sub-5ms latency to US border.",
-        "timeline": "2027",
-    },
-    {
-        "priority": "🟢 Low",
-        "title": "Quantum-Safe Encryption Readiness",
-        "desc": "Begin cryptographic inventory and test post-quantum TLS across internal systems. NIST PQC standards finalized in 2024.",
-        "timeline": "2028",
-    },
-]
-
-for rec in recs:
-    with st.expander(f"{rec['priority']} — {rec['title']} (Target: {rec['timeline']})"):
-        st.markdown(rec["desc"])
-
 # ─── Footer ───────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.caption("Sources: Uptime Institute Global DC Survey 2024, Gartner Hype Cycle for Data Center Infrastructure 2024, IDC Latin America Cloud Tracker, NIST Post-Quantum Cryptography Standards.")
