@@ -1,0 +1,347 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-1:033161568232:service/dc-dashboard-cluster/dc-dashboard-service",
+        "serviceName": "dc-dashboard-service",
+        "clusterArn": "arn:aws:ecs:us-east-1:033161568232:cluster/dc-dashboard-cluster",
+        "loadBalancers": [
+            {
+                "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:033161568232:targetgroup/dc-dashboard-tg/77844a3f40f106e4",
+                "containerName": "dc-dashboard",
+                "containerPort": 8501
+            }
+        ],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 1,
+        "pendingCount": 1,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-1:033161568232:task-definition/dc-dashboard:2",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 100,
+            "strategy": "ROLLING",
+            "bakeTimeInMinutes": 0
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/0959324424414395219",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-1:033161568232:task-definition/dc-dashboard:2",
+                "desiredCount": 0,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2026-04-22T17:49:19.875000-06:00",
+                "updatedAt": "2026-04-22T17:49:19.875000-06:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0649f7a964b7a8f79",
+                            "subnet-022d4ad019c287220"
+                        ],
+                        "securityGroups": [
+                            "sg-0e7f7adf836d69402"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/0959324424414395219 in progress."
+            },
+            {
+                "id": "ecs-svc/3526280187514628803",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-1:033161568232:task-definition/dc-dashboard:2",
+                "desiredCount": 0,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2026-04-22T17:49:06.495000-06:00",
+                "updatedAt": "2026-04-22T17:49:13.040000-06:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0649f7a964b7a8f79",
+                            "subnet-022d4ad019c287220"
+                        ],
+                        "securityGroups": [
+                            "sg-0e7f7adf836d69402"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/3526280187514628803 in progress."
+            },
+            {
+                "id": "ecs-svc/6782856506247577279",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-1:033161568232:task-definition/dc-dashboard:2",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 1,
+                "createdAt": "2026-04-22T17:45:11.377000-06:00",
+                "updatedAt": "2026-04-22T17:49:12.999000-06:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0649f7a964b7a8f79",
+                            "subnet-022d4ad019c287220"
+                        ],
+                        "securityGroups": [
+                            "sg-0e7f7adf836d69402"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/6782856506247577279 in progress."
+            },
+            {
+                "id": "ecs-svc/9042953207262092335",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-1:033161568232:task-definition/dc-dashboard:2",
+                "desiredCount": 1,
+                "pendingCount": 1,
+                "runningCount": 0,
+                "failedTasks": 10,
+                "createdAt": "2026-04-22T17:10:03.997000-06:00",
+                "updatedAt": "2026-04-22T17:49:12.956000-06:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0649f7a964b7a8f79",
+                            "subnet-022d4ad019c287220"
+                        ],
+                        "securityGroups": [
+                            "sg-0e7f7adf836d69402"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/9042953207262092335 in progress."
+            }
+        ],
+        "roleArn": "arn:aws:iam::033161568232:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "184e4926-272f-47b3-b663-74dbc41f511e",
+                "createdAt": "2026-04-22T17:49:01.338000-06:00",
+                "message": "(service dc-dashboard-service) registered 1 targets in (target-group arn:aws:elasticloadbalancing:us-east-1:033161568232:targetgroup/dc-dashboard-tg/77844a3f40f106e4)"
+            },
+            {
+                "id": "1b942678-30b0-426b-8c70-5087055dee82",
+                "createdAt": "2026-04-22T17:48:41.073000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 43c82021aba34795b428c0d92d67da9e)."
+            },
+            {
+                "id": "6189e04a-fcb5-48f8-b010-683c108c1bc3",
+                "createdAt": "2026-04-22T17:47:59.729000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "9481c451-4911-49ec-ba16-0967e29e11f2",
+                "createdAt": "2026-04-22T17:47:20.378000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task bda827d85742479ab3ee1feca10f4aee)."
+            },
+            {
+                "id": "d3216990-6725-40b6-bbca-2c4aa9dd5282",
+                "createdAt": "2026-04-22T17:46:48.141000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "22bea83f-d2fd-4780-bf5b-dae22826ef69",
+                "createdAt": "2026-04-22T17:46:29.429000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 469a4f20c1e6409ea7d9cf4e99eda8de)."
+            },
+            {
+                "id": "15908c6e-aea0-419b-b1b2-6f5d2e625ed9",
+                "createdAt": "2026-04-22T17:45:46.577000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "96383fc9-3327-4e7b-b574-75b93280ad50",
+                "createdAt": "2026-04-22T17:45:18.211000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task ca8bb2af01884c8e8da72c8bb770f561)."
+            },
+            {
+                "id": "102145b7-5676-48e0-b0f2-7d46efb03ccb",
+                "createdAt": "2026-04-22T17:44:15.041000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 7017a857cd2f481486df7485654758a8)."
+            },
+            {
+                "id": "cb7fb708-d6e4-4aa5-b139-91c878177690",
+                "createdAt": "2026-04-22T17:39:14.843000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "3daa42a3-a280-41de-a44e-3d28ad198bb3",
+                "createdAt": "2026-04-22T17:37:47.709000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 58519a920e9e42f8891888c8ed3f7002)."
+            },
+            {
+                "id": "9a2e4163-f9d1-4b2b-a930-4301fe5399df",
+                "createdAt": "2026-04-22T17:32:34.018000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "b4f7f0e0-47b1-4c3b-8558-010b3204987f",
+                "createdAt": "2026-04-22T17:31:05.273000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 71d77a559af746cbab84ac1aeb2f0c5c)."
+            },
+            {
+                "id": "606016f6-c9b5-4e53-b059-acdfefd1c5ee",
+                "createdAt": "2026-04-22T17:25:54.958000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "746030ff-c0af-4956-b080-883aff45e022",
+                "createdAt": "2026-04-22T17:24:28.191000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 515d601af02f4e8b81ef0d8fed33e6ee)."
+            },
+            {
+                "id": "8e0397d8-7233-40b2-b072-e37fcd55fd3f",
+                "createdAt": "2026-04-22T17:23:56.300000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "c2396fb4-29e2-44f0-8072-f53a61c53f2a",
+                "createdAt": "2026-04-22T17:22:29.971000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 38829aa1270945f589557a3507a50207)."
+            },
+            {
+                "id": "e4e06ea0-85a2-4bfb-8f07-80ef09d8bda5",
+                "createdAt": "2026-04-22T17:21:58.852000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "36fb469c-b3a1-440f-b889-cd43f8c6a015",
+                "createdAt": "2026-04-22T17:20:30.310000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 29a7db291c414709b319d45f494e86a3)."
+            },
+            {
+                "id": "356c1e56-50e9-4659-8bb5-c5d2ac988651",
+                "createdAt": "2026-04-22T17:19:58.503000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "28421f5d-d1ee-4fe8-aeec-982ebcc8f59d",
+                "createdAt": "2026-04-22T17:18:29.403000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 58d5f870c9b542e8bed5a691d1133e83)."
+            },
+            {
+                "id": "5b147702-03ad-40ea-b289-d6e742a3b85f",
+                "createdAt": "2026-04-22T17:17:56.515000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "4978d3d8-5580-4be4-a83a-9181882a24c0",
+                "createdAt": "2026-04-22T17:16:29.170000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 8f020bed94124ada9bb621f14e0e1659)."
+            },
+            {
+                "id": "806751e1-5c0f-4437-915a-097906f693d3",
+                "createdAt": "2026-04-22T17:15:56.164000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "04ae6367-09c7-4bf1-97e6-e27033238fdd",
+                "createdAt": "2026-04-22T17:14:21.481000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 313b51cdc3c34d9db425edb8bd574351)."
+            },
+            {
+                "id": "bfda56c2-e93c-4704-99fd-fd47572665e5",
+                "createdAt": "2026-04-22T17:13:49.861000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "ab6dffbe-4ec3-4f4f-9c84-c6e04f5420fb",
+                "createdAt": "2026-04-22T17:12:22.154000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task 3377a0bbca814d149cfac834f9cd8431)."
+            },
+            {
+                "id": "84618dfd-ab95-4520-9389-1012a79a38f4",
+                "createdAt": "2026-04-22T17:11:49.859000-06:00",
+                "message": "(service dc-dashboard-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: 033161568232.dkr.ecr.us-east-1.amazonaws.com/dc-dashboard:latest: not found."
+            },
+            {
+                "id": "fb3272e2-d1aa-4614-b6f0-aefce6378192",
+                "createdAt": "2026-04-22T17:10:19.711000-06:00",
+                "message": "(service dc-dashboard-service) has started 1 tasks: (task f5efea1b670f4d2194b65e238ab9b80f)."
+            }
+        ],
+        "createdAt": "2026-04-22T17:10:03.997000-06:00",
+        "currentServiceRevisions": [
+            {
+                "arn": "arn:aws:ecs:us-east-1:033161568232:service-revision/dc-dashboard-cluster/dc-dashboard-service/0959324424414395219",
+                "requestedTaskCount": 0,
+                "runningTaskCount": 0,
+                "pendingTaskCount": 0
+            },
+            {
+                "arn": "arn:aws:ecs:us-east-1:033161568232:service-revision/dc-dashboard-cluster/dc-dashboard-service/3526280187514628803",
+                "requestedTaskCount": 0,
+                "runningTaskCount": 0,
+                "pendingTaskCount": 0
+            },
+            {
+                "arn": "arn:aws:ecs:us-east-1:033161568232:service-revision/dc-dashboard-cluster/dc-dashboard-service/6782856506247577279",
+                "requestedTaskCount": 1,
+                "runningTaskCount": 1,
+                "pendingTaskCount": 0
+            },
+            {
+                "arn": "arn:aws:ecs:us-east-1:033161568232:service-revision/dc-dashboard-cluster/dc-dashboard-service/9042953207262092335",
+                "requestedTaskCount": 1,
+                "runningTaskCount": 0,
+                "pendingTaskCount": 1
+            }
+        ],
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-0649f7a964b7a8f79",
+                    "subnet-022d4ad019c287220"
+                ],
+                "securityGroups": [
+                    "sg-0e7f7adf836d69402"
+                ],
+                "assignPublicIp": "ENABLED"
+            }
+        },
+        "healthCheckGracePeriodSeconds": 0,
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::033161568232:user/nahum-upy-practice",
+        "enableECSManagedTags": false,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": false,
+        "availabilityZoneRebalancing": "DISABLED",
+        "resourceManagementType": "CUSTOMER"
+    }
+}
